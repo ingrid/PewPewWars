@@ -1,5 +1,8 @@
+require.config({
+	baseUrl:"js/jam/jam/"
+});
+require(['jam'], function(jam){
 var ws;
-window.onload = function(){
     // Variables.
     var conn, game;
 
@@ -26,4 +29,4 @@ window.onload = function(){
         function(){
             console.log(ws.readyState);
         }, 100);
-};
+});
