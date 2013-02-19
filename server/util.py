@@ -1,3 +1,4 @@
+#!/usr/bin/python
 import logging
 import jsonlogger
 
@@ -9,3 +10,9 @@ def getLogger(name=""):
     logger.addHandler(logHandler)
 
     return logger
+
+def unpack(data):
+    pass
+
+def pack(data):
+    pass

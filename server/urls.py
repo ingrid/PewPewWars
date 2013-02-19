@@ -1,7 +1,10 @@
+#!/usr/bin/python
 from tornado.web import url
 
-from ppw import echo
+from ppw import LobbyWebSocket, GameWebSocket, EchoWebSocket
 
 url_list = [
-    (r"/ws/echo", echo)
+    (r"/ws/lobby", LobbyWebSocket),
+    (r"/ws/game", GameWebSocket),
+    (r"/ws/echo", EchoWebSocket),
 ]

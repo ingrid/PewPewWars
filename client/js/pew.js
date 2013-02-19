@@ -1,6 +1,7 @@
+var ws;
 window.onload = function(){
     // Variables.
-    var conn, game, ws;
+    var conn, game;
 
     // Functions.
     var openConnection;
@@ -11,7 +12,7 @@ window.onload = function(){
     }
 
     // Move websocket code to a jam module?
-    ws = new WebSocket("ws://localhost:8888");
+    ws = new WebSocket("ws://localhost:8888/ws/echo");
     ws.onopen = function() {
         ws.send("Don't panic.");
     };
